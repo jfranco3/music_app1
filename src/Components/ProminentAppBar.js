@@ -8,9 +8,6 @@ import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import MoreIcon from "@mui/icons-material/MoreVert";
-import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
-import Stack from "@mui/material/Stack";
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "flex-start",
@@ -59,23 +56,6 @@ export default function ProminentAppBar() {
           </StyledToolbar>
         </AppBar>
       </Box>
-
-      <Stack spacing={2}>
-        <TextField 
-          id="demo-helper-text-misaligned"
-          label="Username"
-          sx={{ width: "30%" }}
-        />
-        <TextField
-          id="demo-helper-text-misaligned"
-          label="Password"
-          sx={{ width: "30%" }}
-        />
-      </Stack>
-
-      <Button variant="contained" color="success">
-        LOGIN
-      </Button>
-    </>
+    </> 
   );
 }

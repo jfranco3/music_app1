@@ -1,12 +1,14 @@
-import React from 'react';
-import ProminentAppBar from './Components/ProminentAppBar';
+import React from "react";
+import ProminentAppBar from "./Components/ProminentAppBar";
+import AppLogin from "./Components/AppLogin";
 
 function App() {
   return (
     <div>
-      <ProminentAppBar/>
+      <ProminentAppBar />
+      <AppLogin />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
