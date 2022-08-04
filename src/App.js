@@ -3,7 +3,7 @@ import ProminentAppBar from "./Components/ProminentAppBar";
 import AppLogin from "./Components/AppLogin";
 import Dashboard from "./Components/Dashboard";
 
-function App() {
+export default function App() {
   return (
     <div>
       <ProminentAppBar />
@@ -13,4 +13,3 @@ function App() {
   );
 }
 
-export default App;
