@@ -9,13 +9,15 @@ export default function AppLogin() {
       <Stack spacing={2}>
         <TextField
           id="demo-helper-text-misaligned"
-          label="Username"
+          label="Required"
+          defaultValue="Username"
           sx={{ width: "30%" }}
           required="true"
         />
         <TextField
-          id="demo-helper-text-misaligned"
-          label="Password"
+          id="filled-required"
+          label="Required"
+          defaultValue="Password"
           sx={{ width: "30%" }}
           required="true"
         />
