@@ -60,35 +60,18 @@ export default function ProminentAppBar() {
         </AppBar>
       </Box>
 
-      <Stack spacing={2} sx={{ width: "100 px" }}>
+      <Stack spacing={2}>
         <TextField
-          className="login-text"
-          variant="filled"
-          color="success"
-          focused
-          sx={{ width: "50%" }}
-        />
-        <TextField
-          className="login-text"
-          variant="filled"
-          color="success"
-          focused
-          sx={{ width: "50%" }}
-        />
-        <TextField
-          helperText="Please enter your name"
           id="demo-helper-text-misaligned"
-          label="Name"
-          sx={{ width: "50%" }}
+          label="Username"
+          sx={{ width: "30%" }}
+        />
+        <TextField
+          id="demo-helper-text-misaligned"
+          label="Password"
+          sx={{ width: "30%" }}
         />
       </Stack>
-
-      <Button variant="contained" color="success">
-        LOGIN
-      </Button>
-
-
-
 
       <Button variant="contained" color="success">
         LOGIN
