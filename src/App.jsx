@@ -1,15 +1,15 @@
 import React from "react";
-import ProminentAppBar from "./Components/ProminentAppBar";
+import AppBar from "./Components/AppBar";
 import Login from "./Components/Login";
-import Dashboard from "./Components/Dashboard";
+import OutlinedCard from "./Components/Dashboard";
 
 export default function App() {
   const [loggedIn, setLoggedIn] = React.useState(false);
   return (
     <div>
-      <ProminentAppBar />
+      <AppBar />
       {!loggedIn && <Login setLoggedIn={setLoggedIn} />}
-      <Dashboard />
+      <OutlinedCard />
     </div>
   );
 }
