@@ -11,11 +11,13 @@ export default function AppLogin() {
           id="demo-helper-text-misaligned"
           label="Username"
           sx={{ width: "30%" }}
+          required="true"
         />
         <TextField
           id="demo-helper-text-misaligned"
           label="Password"
           sx={{ width: "30%" }}
+          required="true"
         />
       </Stack>
 
