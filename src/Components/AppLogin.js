@@ -23,7 +23,7 @@ export default function AppLogin() {
         />
       </Stack>
 
-      <Button id="login-button" variant="contained" color="success">
+      <Button className="login-button" variant="contained" color="success">
         LOGIN
       </Button>
     </div>
