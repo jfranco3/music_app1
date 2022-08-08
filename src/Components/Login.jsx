@@ -7,36 +7,32 @@ import "./App.css";
 //rendered by App.jsx
 export default function Login(props) {
   return (
-    <>
-    <div className="textfield">
-      <Stack spacing={1}>
-        <TextField className="textfield-child"
-          id="demo-helper-text-misaligned"
+    <div
+      style={{ display: "flex", justifyContent: "center", marginTop: "40px" }}
+      className="textfield"
+    >
+      <Stack spacing={2}>
+        <TextField
+          className="textfield-child"
           label="Required"
           defaultValue="Username"
-          sx={{ width: "30%", margin: "auto"}}
           required
         />
-         <TextField className="textfield-child"
-          id="demo-helper-text-misaligned"
+        <TextField
+          className="textfield-child"
           label="Required"
           defaultValue="Password"
-          sx={{ width: "30%", margin: "auto"}}
           required
         />
+        <Button
+          onClick={() => props.setLoggedIn(true)}
+          className="login-button"
+          variant="contained"
+          color="success"
+        >
+          LOG IN
+        </Button>
       </Stack>
-      </div>
-
-      <div>
-      <Button
-        onClick={() => props.setLoggedIn(true)}
-        className="login-button"
-        variant="contained"
-        color="success"
-      >
-        LOGIN
-      </Button>
     </div>
-    </>
   );
 }
