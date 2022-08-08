@@ -5,6 +5,8 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import './Dashboard.css';
+
 
 // You will want to create this component and then import it back into App.js to be conditionally rendered based on login
 
@@ -36,52 +38,51 @@ const card = (
       </Typography>
     </CardContent>
     <CardActions>
-      <Button size="small">Learn More</Button>
+      <Button size="small" color="success">
+        Learn More
+      </Button>
     </CardActions>
   </React.Fragment>
 );
 
 export default function OutlinedCard() {
   return (
-    <>
-      <Box
-        id="cards"
+    <div className="all-cards">
+      <Box id="all-cards-child"
         sx={{
-          color: "ppurple",
-          maxWidth: 400,
-          border: 1,
-          borderRadius: 1,
-          boxShadow: 1,
+          color: "purple",
+          maxWidth: 200,
+          padding: 1,
+          margin: "auto",
         }}
       >
         <Card variant="Outlined">{card}</Card>
       </Box>
 
       <Box
-        id="cards"
+        id="all-cards-child"
         sx={{
           color: "purple",
-          maxWidth: 400,
-          border: 1,
-          borderRadius: 1,
-          boxShadow: 1,
+          maxWidth: 200,
+          padding: 1,
+          margin: "auto",
         }}
       >
         <Card variant="Outlined">{card}</Card>
       </Box>
 
       <Box
-        id="cards"
+        id="all-cards-child"
         sx={{
           color: "purple",
-          maxWidth: 400,
-          border: 1,
-          borderRadius: 1,
-          boxShadow: 1,
+          maxWidth: 200,
+          padding: 1,
+          margin: "auto",
         }}
       >
         <Card variant="Outlined">{card}</Card>
       </Box>
-    </>
+
+    </div>
   );
 }
