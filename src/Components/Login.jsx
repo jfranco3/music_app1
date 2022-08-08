@@ -9,19 +9,19 @@ export default function Login(props) {
   return (
     <>
     <div className="textfield">
-      <Stack spacing={2}>
+      <Stack spacing={1}>
         <TextField className="textfield-child"
           id="demo-helper-text-misaligned"
           label="Required"
           defaultValue="Username"
-          sx={{ width: "30%" }}
+          sx={{ width: "30%", margin: "auto"}}
           required
         />
-        <TextField className="textfield-child"
-          id="filled-required"
+         <TextField className="textfield-child"
+          id="demo-helper-text-misaligned"
           label="Required"
           defaultValue="Password"
-          sx={{ width: "30%" }}
+          sx={{ width: "30%", margin: "auto"}}
           required
         />
       </Stack>
