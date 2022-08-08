@@ -11,7 +11,7 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 
 
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
-  alignItems: "flex-start",
+  alignItems: "auto",
   paddingTop: theme.spacing(1),
   paddingBottom: theme.spacing(2),
   // Override media queries injected by theme.mixins.toolbar
