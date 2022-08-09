@@ -14,7 +14,7 @@ const card = (
       <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
         ONLINE MODE
       </Typography>
-      <Typography variant="body2">Activate to go online!</Typography>
+      <Typography variant="body2"></Typography>
     </CardContent>
     <CardActions>
       <Switch {...label} />

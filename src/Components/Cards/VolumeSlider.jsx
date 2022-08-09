@@ -32,9 +32,7 @@ export default function InputSlider() {
 
   return (
     <Box sx={{ width: 250 }}>
-      <Typography id="input-slider" gutterBottom>
-        Volume
-      </Typography>
+      <Typography id="input-slider" gutterBottom></Typography>
       <Grid container spacing={2} alignItems="center">
         <Grid item>
           <VolumeUp />

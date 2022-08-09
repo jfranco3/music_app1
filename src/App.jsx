@@ -9,7 +9,7 @@ export default function App() {
     <div>
       <AppBar />
       {!loggedIn && <Login setLoggedIn={setLoggedIn} />}
-      <Dashboard />
+      {loggedIn ? <Dashboard /> : null}
     </div>
   );
 }
