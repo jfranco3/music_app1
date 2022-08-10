@@ -5,27 +5,24 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
-export default function BasicSelect() {
-  const [quality, setQuality] = React.useState("");
-
+export default function Selector(props) {
   const handleChange = (event) => {
-    setQuality(event.target.value);
+    props.setQuality(event.target.value);
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box sx={{ minWidth: 250 }}>
       <FormControl fullWidth>
         <InputLabel id="demo-simple-select-label">Quality</InputLabel>
         <Select
           labelId="demo-simple-select-label"
-          id="demo-simple-select"
-          value={quality}
           label="quality"
+          value={props.quality}
           onChange={handleChange}
         >
-          <MenuItem value={10}>Low</MenuItem>
-          <MenuItem value={20}>Normal</MenuItem>
-          <MenuItem value={30}>High</MenuItem>
+          <MenuItem value={"Low"}>Low</MenuItem>
+          <MenuItem value={"Normal"}>Normal</MenuItem>
+          <MenuItem value={"High"}>High</MenuItem>
         </Select>
       </FormControl>
     </Box>

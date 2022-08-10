@@ -6,27 +6,26 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Selector from "./Selector";
 
-const card = (
-  <React.Fragment>
-    <CardContent>
-      <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
-        SELECTOR
-      </Typography>
-      <Typography sx={{ mb: 0.5 }} color="text.secondary"></Typography>
-    </CardContent>
-    <CardActions>
-      <Selector />
-    </CardActions>
-  </React.Fragment>
-);
-
-export default function CardSelector() {
+//RENDERED BY DASHBOARD.JS
+export default function CardSelector({ quality, setQuality }) {
+  const card = (
+    <React.Fragment>
+      <CardContent>
+        <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
+          SELECTOR
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Selector quality={quality} setQuality={setQuality} />
+      </CardActions>
+    </React.Fragment>
+  );
   return (
     <div>
       <Box
         id="all-cards-child"
         sx={{
-          maxWidth: 200,
+          minWidth: 200,
           padding: 1,
           margin: "auto",
         }}

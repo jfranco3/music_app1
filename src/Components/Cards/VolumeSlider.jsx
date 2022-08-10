@@ -11,9 +11,8 @@ const Input = styled(MuiInput)`
   width: 42px;
 `;
 
-export default function InputSlider() {
-  const [value, setValue] = React.useState(30);
-
+export default function VolumeSlider(props) {
+  const { value, setValue } = props;
   const handleSliderChange = (event, newValue) => {
     setValue(newValue);
   };
