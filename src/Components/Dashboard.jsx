@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Dashboard.css";
-import CardSwitch from "./Cards/CardSwitch";
-import CardSlider from "./Cards/CardSlider";
-import CardSelector from "./Cards/CardSelector";
+import OnlineCard from "./Cards/OnlineCard";
+import VolumeCard from "./Cards/VolumeCard";
+import QualityCard from "./Cards/QualityCard";
 import { Typography } from "@mui/material";
 
 export default function Dashboard() {
@@ -22,16 +22,16 @@ export default function Dashboard() {
   return (
     <div>
       <div className="all-cards">
-        <CardSwitch setOnline={setOnline} online={online} />
-        <CardSlider
+        <OnlineCard setOnline={setOnline} online={online} />
+        <VolumeCard
           setValue={setValue}
           value={value}
           setNotification={setNotification}
         />
-        <CardSelector setQuality={setQuality} quality={quality} />
+        <QualityCard setQuality={setQuality} quality={quality} />
       </div>
       <div>
-        <h1>NOTIFICATION: </h1>
+        <h1>NOTIFICATIONS: </h1>
         <Typography variant="h6">{notification.volumeWarning}</Typography>
         <Typography variant="h6">{notification.qualityWarning}</Typography>
         <Typography variant="h6">{notification.onlineWarning}</Typography>

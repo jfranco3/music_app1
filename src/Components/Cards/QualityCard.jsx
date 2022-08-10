@@ -4,10 +4,10 @@ import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
-import Selector from "./Selector";
+import QualitySelector from "./QualitySelector";
 
 //RENDERED BY DASHBOARD.JS
-export default function CardSelector({ quality, setQuality, setNotification }) {
+export default function QualityCard({ quality, setQuality, setNotification }) {
   const card = (
     <React.Fragment>
       <CardContent>
@@ -16,7 +16,7 @@ export default function CardSelector({ quality, setQuality, setNotification }) {
         </Typography>
       </CardContent>
       <CardActions>
-        <Selector
+        <QualitySelector
           quality={quality}
           setQuality={setQuality}
           setNotification={setNotification}
