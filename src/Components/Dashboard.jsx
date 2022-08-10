@@ -3,6 +3,7 @@ import "./Dashboard.css";
 import CardSwitch from "./Cards/CardSwitch";
 import CardSlider from "./Cards/CardSlider";
 import CardSelector from "./Cards/CardSelector";
+import { Typography } from "@mui/material";
 
 export default function Dashboard() {
   //system notifications
@@ -11,38 +12,30 @@ export default function Dashboard() {
     volumeWarning: "",
     qualityWarning: "",
   });
+
   const [online, setOnline] = useState(false);
   const [value, setValue] = useState(20);
   const [quality, setQuality] = useState("");
 
-  useEffect(() => {
-    if (!online) {
-      setNotifications([
-        ...notifications,
-        "Your application is offline. You will not be able to share or stream music to other devices.",
-      ]);
-    }
-    if (value >= 80) {
-      setNotifications([
-        ...notifications,
-        "Listening to music at a high volume could cause long-term hearing loss.",
-      ]);
-    }
-    if (quality === "low") {
-      setNotifications([
-        ...notifications,
-        "Music quality is degraded. Increase quality if your connection allows it.",
-      ]);
-    }
-  }, [online, value, quality]);
-
-  console.log("NOTIFICATIONS", notifications);
+  console.log("NOTIFICATION", notification);
 
   return (
-    <div className="all-cards">
-      <CardSwitch setOnline={setOnline} online={online} />
-      <CardSlider setValue={setValue} value={value} />
-      <CardSelector setQuality={setQuality} quality={quality} />
+    <div>
+      <div className="all-cards">
+        <CardSwitch setOnline={setOnline} online={online} />
+        <CardSlider
+          setValue={setValue}
+          value={value}
+          setNotification={setNotification}
+        />
+        <CardSelector setQuality={setQuality} quality={quality} />
+      </div>
+      <div>
+        <h1>NOTIFICATION: </h1>
+        <Typography variant="h6">{notification.volumeWarning}</Typography>
+        <Typography variant="h6">{notification.qualityWarning}</Typography>
+        <Typography variant="h6">{notification.onlineWarning}</Typography>
+      </div>
     </div>
   );
 }

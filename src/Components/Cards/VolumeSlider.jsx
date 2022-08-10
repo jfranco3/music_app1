@@ -12,9 +12,19 @@ const Input = styled(MuiInput)`
 `;
 
 export default function VolumeSlider(props) {
-  const { value, setValue } = props;
+  const { value, setValue, setNotification } = props;
   const handleSliderChange = (event, newValue) => {
     setValue(newValue);
+    if (newValue >= 80) {
+      setNotification({
+        volumeWarning:
+          "Listening to music at a high volume could cause long-term hearing loss.",
+      });
+    } else {
+      setNotification({
+        volumeWarning: "",
+      });
+    }
   };
 
   const handleInputChange = (event) => {
