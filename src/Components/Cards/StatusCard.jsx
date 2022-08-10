@@ -6,9 +6,11 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 
-export default function CardSwitch(props) {
+export default function StatusCard(props) {
+  const { online, setOnline, setNotification } = props;
+
   const handleOnline = () => {
-    props.setOnline(!props.online);
+    setOnline(online);
   };
 
   const label = { inputProps: { "aria-label": "Switch demo" } };
@@ -17,7 +19,7 @@ export default function CardSwitch(props) {
     <React.Fragment>
       <CardContent>
         <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
-          ONLINE MODE
+          ONLINE STATUS
         </Typography>
         <Typography variant="body2"></Typography>
       </CardContent>

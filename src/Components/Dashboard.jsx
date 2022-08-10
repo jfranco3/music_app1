@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Dashboard.css";
-import OnlineCard from "./Cards/OnlineCard";
+import StatusCard from "./Cards/StatusCard";
 import VolumeCard from "./Cards/VolumeCard";
 import QualityCard from "./Cards/QualityCard";
 import { Typography } from "@mui/material";
@@ -22,13 +22,21 @@ export default function Dashboard() {
   return (
     <div>
       <div className="all-cards">
-        <OnlineCard setOnline={setOnline} online={online} />
+        <StatusCard
+          setOnline={setOnline}
+          online={online}
+          setNotification={setNotification}
+        />
         <VolumeCard
           setValue={setValue}
           value={value}
           setNotification={setNotification}
         />
-        <QualityCard setQuality={setQuality} quality={quality} />
+        <QualityCard
+          setQuality={setQuality}
+          quality={quality}
+          setNotification={setNotification}
+        />
       </div>
       <div>
         <h1>NOTIFICATIONS: </h1>
