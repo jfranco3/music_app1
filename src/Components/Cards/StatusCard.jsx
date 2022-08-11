@@ -7,19 +7,18 @@ import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 
 export default function StatusCard(props) {
-  const { status, setStatus, setNotification } = props;
+  const { status, setStatus, setNotification, notification } = props;
 
   const handleStatus = (event) => {
     setStatus(event.target.checked);
     if (!status) {
       setNotification({
+        ...notification,
         onlineWarning:
           "Your application is offline. You won't be able to share or stream music to other devices.",
       });
     } else {
-      setNotification({
-        onlineWarning: "",
-      });
+      setNotification({ ...notification, onlineWarning: "" });
     }
   };
 
@@ -29,7 +28,7 @@ export default function StatusCard(props) {
     <React.Fragment>
       <CardContent>
         <Typography sx={{ fontSize: 20 }} color="text.secondary" gutterBottom>
-          ONLINE STATUS
+          OFFLINE STATUS
         </Typography>
         <Typography variant="body2"></Typography>
       </CardContent>

@@ -7,7 +7,7 @@ import CardContent from "@mui/material/CardContent";
 import VolumeSlider from "./VolumeSlider";
 
 export default function VolumeCard(props) {
-  const { value, setValue, setNotification } = props;
+  const { value, setValue, setNotification, notification } = props;
   const card = (
     <React.Fragment>
       <CardContent>
@@ -20,6 +20,7 @@ export default function VolumeCard(props) {
           value={value}
           setValue={setValue}
           setNotification={setNotification}
+          notification={notification}
         />
       </CardActions>
     </React.Fragment>

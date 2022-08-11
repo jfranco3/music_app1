@@ -7,7 +7,12 @@ import CardContent from "@mui/material/CardContent";
 import QualitySelector from "./QualitySelector";
 
 //RENDERED BY DASHBOARD.JS
-export default function QualityCard({ quality, setQuality, setNotification }) {
+export default function QualityCard({
+  quality,
+  setQuality,
+  setNotification,
+  notification,
+}) {
   const card = (
     <React.Fragment>
       <CardContent>
@@ -20,6 +25,7 @@ export default function QualityCard({ quality, setQuality, setNotification }) {
           quality={quality}
           setQuality={setQuality}
           setNotification={setNotification}
+          notification={notification}
         />
       </CardActions>
     </React.Fragment>

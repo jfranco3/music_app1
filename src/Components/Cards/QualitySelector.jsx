@@ -6,17 +6,20 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 export default function QualitySelector(props) {
-  const { quality, setQuality, setNotficiation } = props;
+  const { quality, setQuality, setNotification, notification } = props;
 
   const handleChange = (event) => {
     setQuality(event.target.value);
-    if ({ quality } === "Low") {
-      setNotficiation({
+    console.log("QUALITY", quality);
+    if (event.target.value === "Low") {
+      setNotification({
+        ...notification,
         qualityWarning:
           "Music quality is degraded. Increase quality if your connection allows it.",
       });
     } else {
-      setNotficiation({
+      setNotification({
+        ...notification,
         qualityWarning: "",
       });
     }

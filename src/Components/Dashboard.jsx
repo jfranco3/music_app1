@@ -26,16 +26,19 @@ export default function Dashboard() {
           status={status}
           setStatus={setStatus}
           setNotification={setNotification}
+          notification={notification}
         />
         <VolumeCard
           value={value}
           setValue={setValue}
           setNotification={setNotification}
+          notification={notification}
         />
         <QualityCard
           quality={quality}
           setQuality={setQuality}
           setNotification={setNotification}
+          notification={notification}
         />
       </div>
 
