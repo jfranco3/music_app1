@@ -7,10 +7,20 @@ import Typography from "@mui/material/Typography";
 import Switch from "@mui/material/Switch";
 
 export default function StatusCard(props) {
-  const { online, setOnline, setNotification } = props;
+  const { status, setStatus, setNotification } = props;
 
-  const handleOnline = () => {
-    setOnline(online);
+  const handleStatus = (event) => {
+    setStatus(event.target.checked);
+    if (!status) {
+      setNotification({
+        onlineWarning:
+          "Your application is offline. You won't be able to share or stream music to other devices.",
+      });
+    } else {
+      setNotification({
+        onlineWarning: "",
+      });
+    }
   };
 
   const label = { inputProps: { "aria-label": "Switch demo" } };
@@ -24,7 +34,7 @@ export default function StatusCard(props) {
         <Typography variant="body2"></Typography>
       </CardContent>
       <CardActions>
-        <Switch onClick={handleOnline} {...label} />
+        <Switch onClick={handleStatus} checked={status} {...label} />
       </CardActions>
     </React.Fragment>
   );

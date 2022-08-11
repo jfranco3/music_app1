@@ -13,7 +13,7 @@ export default function Dashboard() {
     qualityWarning: "",
   });
 
-  const [online, setOnline] = useState(false);
+  const [status, setStatus] = useState(false);
   const [value, setValue] = useState(20);
   const [quality, setQuality] = useState("");
 
@@ -23,18 +23,18 @@ export default function Dashboard() {
     <div>
       <div className="all-cards">
         <StatusCard
-          setOnline={setOnline}
-          online={online}
+          status={status}
+          setStatus={setStatus}
           setNotification={setNotification}
         />
         <VolumeCard
-          setValue={setValue}
           value={value}
+          setValue={setValue}
           setNotification={setNotification}
         />
         <QualityCard
-          setQuality={setQuality}
           quality={quality}
+          setQuality={setQuality}
           setNotification={setNotification}
         />
       </div>

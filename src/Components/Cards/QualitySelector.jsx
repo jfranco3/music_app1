@@ -6,8 +6,20 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 
 export default function QualitySelector(props) {
+  const { quality, setQuality, setNotficiation } = props;
+
   const handleChange = (event) => {
-    props.setQuality(event.target.value);
+    setQuality(event.target.value);
+    if (quality === "Low") {
+      setNotficiation({
+        qualityWarning:
+          "Music quality is degraded. Increase quality if your connection allows it.",
+      });
+    } else {
+      setNotficiation({
+        qualityWarning: "",
+      });
+    }
   };
 
   return (
@@ -17,7 +29,7 @@ export default function QualitySelector(props) {
         <Select
           labelId="demo-simple-select-label"
           label="quality"
-          value={props.quality}
+          value={quality}
           onChange={handleChange}
         >
           <MenuItem value={"Low"}>Low</MenuItem>
