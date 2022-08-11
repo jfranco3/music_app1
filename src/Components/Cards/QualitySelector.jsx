@@ -10,7 +10,7 @@ export default function QualitySelector(props) {
 
   const handleChange = (event) => {
     setQuality(event.target.value);
-    if (quality === "Low") {
+    if ({ quality } === "Low") {
       setNotficiation({
         qualityWarning:
           "Music quality is degraded. Increase quality if your connection allows it.",
@@ -23,11 +23,11 @@ export default function QualitySelector(props) {
   };
 
   return (
-    <Box sx={{ minWidth: 250 }}>
+    <Box sx={{ m: 0.2, minWidth: 120 }} size="small">
       <FormControl fullWidth>
-        <InputLabel id="demo-simple-select-label">Quality</InputLabel>
+        <InputLabel id="demo-select-small">Quality</InputLabel>
         <Select
-          labelId="demo-simple-select-label"
+          labelId="demo-select-small"
           label="quality"
           value={quality}
           onChange={handleChange}

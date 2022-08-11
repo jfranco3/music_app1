@@ -38,11 +38,38 @@ export default function Dashboard() {
           setNotification={setNotification}
         />
       </div>
+
       <div>
-        <h1>NOTIFICATIONS: </h1>
-        <Typography variant="h6">{notification.volumeWarning}</Typography>
-        <Typography variant="h6">{notification.qualityWarning}</Typography>
-        <Typography variant="h6">{notification.onlineWarning}</Typography>
+        <h1>System Notifications: </h1>
+        <Typography
+          sx={{
+            margin: "auto",
+            textAlign: "center",
+          }}
+          variant="h6"
+        >
+          {notification.volumeWarning}
+        </Typography>
+
+        <Typography
+          sx={{
+            margin: "auto",
+            textAlign: "center",
+          }}
+          variant="h6"
+        >
+          {notification.qualityWarning}
+        </Typography>
+
+        <Typography
+          sx={{
+            margin: "auto",
+            textAlign: "center",
+          }}
+          variant="h6"
+        >
+          {notification.onlineWarning}
+        </Typography>
       </div>
     </div>
   );
